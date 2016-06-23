@@ -1,22 +1,29 @@
----
-layout: default
-title: home
-titleAfter: HelloWorld
-meta: Introdunce from github
-priority: 1.0
----
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Vega</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="/imgs/favicon.png">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400">
+	<link rel="stylesheet" href="/css/application.css">
+</head>
 
-  <h1>Witzy's Backyard</h1>
-  <h2>I am still working on this.....</h2>
-  <h3>please keep waiting:)</h3>
-  <p>Last update time: 2016-6-21 20:58</p>
-  <h3>Types of TPYE</h3>
+<body>
+ 	<div class="outer-container">
+ 		<div class="inner-container">
+ 			<img src="imgs/pug_1x.png" srcset="imgs/pug_2x.png 2x, imgs/pug_3x.png 3x" alt="" class="the-pug">
 
-  <ol>
-  {% for t in site.data.types %}
-  	<li>
-  	<a href="#">{{ t.title }}</a>
-  	{{t.content | markdownify }}
-  	</li>
-  {% endfor %}
-  </ol>
+ 			<p>I'm <b>Vega</b>, student from <b>South China Normal University</b>, Guangzhou, China.</p>
+ 			<p>I major in Computer Science, currently I am studying <b>iOS development</b>.</p>
+
+ 			<ul class="elsewhere">
+ 				<li class="elsewhere_item"><a href="/blog/index.html">Blog</a></li>
+ 				<li class="elsewhere_item"><a href="http://github.com/ukiyoevega">Github</a></li>
+ 				<li class="elsewhere_item"><a href="https://www.instagram.com/ukiyoevega/">Instagram</a></li>
+ 				<li class="elsewhere_item"><a href="http://www.weibo.com/2115303133">Weibo</a></li>
+ 			</ul>
+ 		</div>
+ 	</div>
+</body>
+</html>

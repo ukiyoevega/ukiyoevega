@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en-ca">
-<head>
-  <meta charset="utf-8">
-  <title>{% if page.title %}{{page.title}} ⋅ {% endif %}ukiyoevega{% if page.titleAfter %} ⋅ {{page.titleAfter}}{% endif %}</title>
-  <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/main.css">
-  <meta name="description" content="{{page.meta}}">
-</head>
-<body>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>{% if page.title %}{{page.title}} ⋅ {% endif %}Vega</title>
+    <link rel="shortcut icon" href="imgs/favicon.png" />
+     <link rel="stylesheet" type="text/css" href="/css/style.css" />
+     <link rel="stylesheet" type="text/css" href="/css/highlight.css" media="all"/>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+          <h1>{{ page.title }}</h1>
+        </header>
+        	{% include nav.html %}
+        <article class="content">
+          {{ content }}
+        </article>
+      </div>
 
-<header class="masthead {{page.mastheadClass}}">
-	<strong>Humm...</strong>
-	{% include nav.html navclass='nav top' %}
-</header>
+      <footer>
+      </footer>
 
-{{content}}
-
-<footer>
-	{% include nav.html navclass='nav bottom' %}
- 	<p>copyright 2016 Ukiyoevega</p>
-</footer>
-
-</body>
+    </div>
+  </body>
 </html>

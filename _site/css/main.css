@@ -4,6 +4,7 @@ html {
 
 	font: normal 100%/1.4 Georgia,serif;	
 }
+
 .masthead {
   padding: 1em;
 
@@ -13,18 +14,6 @@ html {
   color: #fff;
 }
 
-.masthead-articles {
-	background-image: url("../img/bgi2.jpg");
-}
-
-.masthead-third {
-	background-image: url("../img/bgi3.jpg");
-}
-.current {
-	background-color: #000531;
-	color: #fff;
-
-}
 
 .nav {
 	margin: 0;

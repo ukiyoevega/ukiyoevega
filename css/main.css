@@ -1,6 +1,32 @@
----
----
+html {
+	margin: 0;
+	padding: 0;
 
-{% include css/common.css %}
-{% include css/masthead.css %}
-{% include css/nav.css %}
+	font: normal 100%/1.4 Georgia,serif;	
+}
+
+.masthead {
+  padding: 1em;
+
+  background: #000531 url("../img/bgi.jpg") no-repeat center center;
+  background-size: cover;
+
+  color: #fff;
+}
+
+
+.nav {
+	margin: 0;
+	padding: 0;
+
+	list-style-type: none;
+}
+
+.nav > li {
+	display:  inline-block;
+}
+
+.nav-top {
+	font-size: 1.25rem;
+}
+
