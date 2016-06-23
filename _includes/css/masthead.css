@@ -1,0 +1,16 @@
+.masthead {
+  padding: 1em;
+
+  background: #000531 url("../img/bgi.jpg") no-repeat center center;
+  background-size: cover;
+
+  color: #fff;
+}
+
+.masthead-articles {
+	background-image: url("../img/bgi2.jpg");
+}
+
+.masthead-third {
+	background-image: url("../img/bgi3.jpg");
+}

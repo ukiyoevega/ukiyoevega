@@ -1,0 +1,10 @@
+<url>
+	<loc>http://ukiyoevega.github.io{{site.baseurl}}{{include.entry.url}}</loc>
+	{% if include.entry.changefreq %}
+	<changefreq>{{include.entry.changefreq}}</changefreq>
+	{% endif %}
+	{% if include.entry.priority %}
+	<priority>{{include.entry.priority}}</priority>
+	{% endif %}
+	<priority>0.5</priority>
+</url>
