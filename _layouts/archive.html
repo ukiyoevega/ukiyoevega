@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
-
-<section class="meta">
+  <section class="title">
+    <h2>{{ page.title }} </h2>
+  </section>
+  <section class="meta">
   <span class="time">
     <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time>
   </span>
-  
-</section>
+  </section>
 
 <section class="post">
   {{ content }}
