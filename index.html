@@ -1,29 +1,62 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Vega</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" href="/imgs/favicon.png">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400">
-	<link rel="stylesheet" href="/css/application.css">
-</head>
+---
+layout: default
+title: Home
+---
 
-<body>
- 	<div class="outer-container">
- 		<div class="inner-container">
- 			<img src="imgs/witzyboof.png" srcset="imgs/witzy.png" alt="" class="photo">
+<div class="home">
+  <div class="post-list">
 
- 			<p>I'm <b>Vega</b>, a 19-year-old sophomore at <b>South China Normal University</b>, Guangzhou, China.</p>
- 			<p>I major in software engineering, currently I'm studying <b>iOS development</b>.</p>
+    {% for post in site.posts limit:5%}
 
- 			<ul class="elsewhere">
- 				<li class="elsewhere_item"><a href="/blog/index.html">Blog</a></li>
- 				<li class="elsewhere_item"><a href="http://github.com/ukiyoevega">Github</a></li>
- 				<li class="elsewhere_item"><a href="https://www.instagram.com/ukiyoevega/">Instagram</a></li>
- 				<li class="elsewhere_item"><a href="http://www.weibo.com/2115303133">Weibo</a></li>
- 			</ul>
- 		</div>
- 	</div>
-</body>
-</html>
+    <article class="post_card post">
+      <header class="post_header">
+        <h2 class="post_title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a></h2>
+        <time class="post_date">{{ post.date | date: "%d %B %Y, %A" }}</time>
+      </header>
+      <div class="post_excerpt">
+        <p>
+          {% if post.description %}
+          {{ post.description}}
+          {% else %}
+          {{ post.excerpt }}
+          {% endif %} 
+          <a class="read-more" href="{{ post.url | prepend: site.baseurl }}"> »  </a>
+        </p> 
+      </div>
+      <footer class="post_meta">
+
+
+        {% if post.location %}
+        <span class="author-location">
+          <div data-icon="ei-location"></div>
+          <a href=https://www.google.com/maps/place/{{post.location}}">{{ post.location }}</a>
+        </span>
+        {% endif %}
+        <!--
+        {% for category in post.categories %}
+        <a href="{{"/category/" | append: category | prepend: site.baseurl }}">
+          <data data-icon="ei-archive"></data>
+          {{category}}</a>
+        {% endfor %}
+        -->
+
+        <!--
+        {% if post.author %}
+        <span class="author_meta">
+          <img src="{{site.baseurl}}/assets/img/{{post.author}}.jpg"></img>
+          <span>David Lin</span>
+        </span>
+        {% endif %}
+        -->
+
+        <!--p class="readmore">
+          <a href=""><data data-icon="ei-arrow-right"></data>Read this article  </a>
+        </p-->
+      </footer>
+      <hr/>
+    </article>
+    {% endfor %}
+
+    <div class="pagination older-post"><a href="./archive"><data data-icon="ei-arrow-right"></data> Archive  </a></div>
+  </div>
+</div>
