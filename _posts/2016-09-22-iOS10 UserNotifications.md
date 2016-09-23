@@ -9,6 +9,7 @@ description: iOS10 UserNotifications学习笔记
 
 ### 第一步，请求用户授权使用Notification发送通知。
 一般在viewDidLoad方法中请求。远程通知和本地通知都通过词方法授权。注意：通知中心不能自行创建，current()用于获取应用默认的通知中心。
+
 ```swift
 UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
     if granted {                self.loadNotificationData()
@@ -81,7 +82,7 @@ func userNotificationCenter(_ center: UNUserNotificationCenter,didReceive respon
 
 ### 第六步，管理队列中的通知。
 可以通过调用系统给定的特定api来对通知进行删、改的管理。通过可视化的table方式对展示到table中的通知删除，可以手动删除等待队列中的通知。
-```swift    
+```swift
 override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
     //No.9 手动删除等待队列中的通知
     guard let section =
@@ -101,7 +102,7 @@ override func tableView(_ tableView: UITableView, commit editingStyle: UITableVi
 ```
 
 ### 第七步，查看系统通知权限设置。
-```swift    
+```swift
 func loadNotificationData(callback: (() -> ())? = .none) {
     let group = DispatchGroup()
      查询系统关于通知的设置并展示到table中
@@ -144,5 +145,5 @@ func loadNotificationData(callback: (() -> ())? = .none) {
     }
  
 }
-```  
+```
 
