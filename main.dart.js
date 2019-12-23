@@ -36227,7 +36227,7 @@ h=A.bI(p,p,C.l,p,p,p,p,p,o,p,p,20,p,C.aI,p,1.2,!0,p,p,p,p,p,p)
 return T.nG(H.b([m,l,new T.dg(p,25,p,p),k,j,f,t,q,new T.dg(p,25,p,p),r,s,new T.dg(p,25,p,p),g,i,new T.dg(p,25,p,p),T.ll(p,p,C.bc,!0,p,Q.bV(H.b([Q.bV(p,p,p,"jiajia.gulu@gmail.com"),Q.bV(p,p,p," or add "),Q.bV(p,p,p,"kyio0627"),Q.bV(p,p,p," on wechat.")],u),p,h,"If you would like to work or make something awesome together with me, drop me a line at "),C.ag,p,1,C.bd)],[N.bL]),C.dG,C.hL,C.f2)},
 $aa5:function(){return[X.iG]}}
 X.Kn.prototype={
-$0:function(){return C.a5.jF(window,"https://itunes.apple.com/app/id1445637307","Yiida")},
+$0:function(){return C.a5.jF(window,"https://itunes.apple.com/cn/app/id1445637307","Yiida")},
 $S:12}
 X.Ko.prototype={
 $0:function(){return C.a5.jF(window,"https://bearychat.com","Bearychat")},
